@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+body {
+	font-family: 'Poppins', sans-serif;
+	background: #fcfcff;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+#profile_container {
+	position: relative;
+	background: transparent;
+	width: 100%;
+	min-width: 320px;
+}
+
+#profile_pic_cnt {
+	height: 120px;
+	width: 120px;
+	position: relative;
+	background: transparent;
+	left: calc(50% - 60px);
+	margin-top: 4rem;
+}
+
+#profile_pic_border {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	border-radius: 50%;
+	border: 3px solid #5F9DF7;
+}
+
+#profile_pic_main {
+	height: 90%;
+	width: 90%;
+	position: absolute;
+	background: url('profile.jpg');
+	background-size: cover;
+	left: 5%;
+	top: 5%;
+	border-radius: 50%;
+	
+}
+
+#profile_name_cnt {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	background: transparent;
+	position: relative;
+	margin-top: 1rem;
+	text-align: center;
+}
+
+#profile_name {
+	background: transparent;
+	font-weight: 500;
+	font-size: 1.5rem;
+	margin-top: 1rem;
+}
+
+#profile_prof {
+	background: transparent;
+	font-weight: 600;
+	font-size: 0.9rem;
+	color: #73777B;
+}
+
+
+#profile_social {
+	position: relative;
+	width: 100px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1.5rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	text-align: center;
+	font-size: 1.2rem;
+	grid-gap: 0rem;
+}
+
+a {
+	text-decoration: none;
+	line-height: auto;
+	color: #141417;
+}
+
+#profile_carrer {
+	position: relative;
+	width: 320px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1.5rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	text-align: center;
+	grid-gap: 0.5rem;
+	font-weight: 500;
+}
+
+.carrer_top {
+	font-weight: 700;
+	font-size: 1rem;
+}
+
+.carrer_bottom {
+	color: #73777B;
+	font-size: 0.9rem;
+	font-weight: 600;
+}
+
+#profile_me {
+	position: relative;
+	margin-top: 1.5rem;
+	width: 320px;
+	margin-left: auto;
+	margin-right: auto;
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	text-align: center;
+	grid-gap: 0.5rem;
+}
+
+#download_cv {
+	height: 60px;
+	border-radius: 5px;
+	background: #4649FF;
+	line-height: 55px;
+	color: white;
+	font-weight: 600;
+}
+
+#chat {
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	text-align: center;
+	grid-gap: 0.5rem;
+	background: trasparent;
+	line-height: 50px;
+	font-size: 1.2rem;
+	
+}
+
+#chat_whatsapp, #chat_messanger {
+	background: #EFF5F5;
+	border-radius: 10px;
+	height: 50px;
+	width: 50px;
+	margin-top: 5px;
+	color: #141417;
+}
+
+#profile_works {
+	min-width: 320px;
+	width: 100%;
+	background: transparent;
+	margin-top: 1rem;
+	position: relative;
+}
+
+#works_opt {
+	height: 60px;
+	width: 320px;
+	background: #EFEFEF;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 2rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	text-align: center;
+	grid-gap: 0.5rem;
+	font-weight: 500;
+	border-radius: 10px;
+}
+
+#opts_projects, #opts_skills {
+	background: transparent;
+	height: 50px;
+	border-radius: 10px;
+	margin-top: 5px;
+	line-height: 50px;
+	padding: 0;
+	z-index: 5;
+}
+
+#opts_projects {
+	margin-left: 5px;
+}
+
+#opts_skills {
+	margin-right: 5px;
+}
+
+#opts {
+	height: 50px;
+	width: 151px;
+	background: #fcfcff;
+	position: absolute;
+	left: 5px;
+	top: 5px;
+	border-radius: 10px;
+	z-index: 1;
+	transition: 0.5s ease-in-out;
+}
+
+
+#works_projects {
+	min-width: 320px;
+	width: 630px;
+	background: transparent;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 1rem;
+	margin-top: 2rem;
+	
+}
+
+.projects {
+	height: 300px;
+	width: 310px;
+	background: #EFF5F5;
+	background-size: cover;
+	border-radius: 10px;
+	overflow-y: hidden;
+	position: relative;
+}
+
+.pj_img {
+  height: 230px;
+  width: 300px;
+  background: #141417;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  border-radius: 10px;
+}
+
+.pimg {
+  border-radius: 10px;
+  border: none;
+  object-fit: contain;
+}
+
+.pj_details {
+  height: 50px;
+  width: 300px;
+  background: transparent;
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+}
+
+.details_name {
+  height: 50px;
+  width: 240px;
+  background: transparent;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  line-height: 50px;
+  padding-left: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.pj_link {
+  height: 40px;
+  width: 40px;
+  background: #4649FF;
+  position: absolute;
+  right: 10px;
+  line-height: 40px;
+  text-align: center;
+  top: 5px;
+  color: #fcfcff;
+  border-radius: 10px;
+  font-size: 1.2rem;
+}
+
+#works_skills {
+  min-width: 320px;
+  width: 630px;
+  background: transparent;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  margin-top: 2rem;
+}
+
+.skills {
+  height: auto;
+  width: 310px;
+  background: transparent;
+  background-size: cover;
+  border-radius: 10px;
+  overflow-y: hidden;
+  position: relative;
+}
+
+.skills_header {
+  width: auto;
+  position: relative;
+  margin-top: 0.5rem;
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  background: transparent;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.skills_list {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0.5rem;
+}
+
+.list_details {
+  height: 40px;
+  width: 150px;
+  position: relative;
+  background: transparent;
+  line-height: 30px;
+}
+
+.list_icon {
+  text-align: center;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 5px;
+  left: 0px;
+  background: transparent;
+  line-height: 20px;
+  font-size: 1.2rem;
+  color: #4649FF;
+}
+
+.list_name {
+  height: 20px;
+  width: 100px;
+  position: absolute;
+  left: 20px;
+  top: 5px;
+  line-height: 20px;
+  font-size: 1rem;
+  padding-left: 5px;
+  background: transparent;
+  font-weight: 500;
+}
+
+
+.list_exp {
+  height: 15px;
+  width: 100px;
+  background: transparent;
+  position: absolute;
+  left: 25px;
+  bottom: 0px;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 15px;
+  color: #73777B;
+}
+
+.profile_footer {
+  height: 100px;
+  width: auto;
+  position: relative;
+  margin-top: 1rem;
+  padding: 0;
+}
+
+.footer_credits {
+  height: 40px;
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  top: 30px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #141417;
+}
+
+
+
+@media only screen and (max-width: 400px) {
+  #works_projects, #works_skills{
+    width: 320px;
+    grid-template-columns: 1fr;
+  }
+
+  .projects {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .footer_credits {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+
+
