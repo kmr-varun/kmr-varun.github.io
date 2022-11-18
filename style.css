@@ -402,7 +402,7 @@ a {
 
 
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 500px) {
   #works_projects, #works_skills{
     width: 320px;
     grid-template-columns: 1fr;
