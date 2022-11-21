@@ -2,7 +2,8 @@
 
 body {
 	font-family: 'Poppins', sans-serif;
-	background: #fcfcff;
+	background: #03191E;
+	color: #fcfcff;
 }
 
 * {
@@ -30,7 +31,7 @@ body {
 	width: 100%;
 	position: relative;
 	border-radius: 50%;
-	border: 3px solid #5F9DF7;
+	border: 3px solid #8C61FF;
 }
 
 #profile_pic_main {
@@ -86,7 +87,7 @@ body {
 a {
 	text-decoration: none;
 	line-height: auto;
-	color: #141417;
+	color: #fcfcff;
 }
 
 #profile_carrer {
@@ -128,7 +129,7 @@ a {
 #download_cv {
 	height: 60px;
 	border-radius: 5px;
-	background: #4649FF;
+	background: #8C61FF;
 	line-height: 55px;
 	color: white;
 	font-weight: 600;
@@ -147,12 +148,12 @@ a {
 }
 
 #chat_whatsapp, #chat_messanger {
-	background: #EFF5F5;
+	background: #424651;
 	border-radius: 10px;
 	height: 50px;
 	width: 50px;
 	margin-top: 5px;
-	color: #141417;
+	color: #fcfcff;
 }
 
 #profile_works {
@@ -166,7 +167,7 @@ a {
 #works_opt {
 	height: 60px;
 	width: 320px;
-	background: #EFEFEF;
+	background: #424651;
 	position: relative;
 	margin-left: auto;
 	margin-right: auto;
@@ -200,7 +201,7 @@ a {
 #opts {
 	height: 50px;
 	width: 151px;
-	background: #fcfcff;
+	background: #8C61FF;
 	position: absolute;
 	left: 5px;
 	top: 5px;
@@ -227,7 +228,7 @@ a {
 .projects {
 	height: 300px;
 	width: 310px;
-	background: #EFF5F5;
+	background: #424651;
 	background-size: cover;
 	border-radius: 10px;
 	overflow-y: hidden;
@@ -275,7 +276,7 @@ a {
 .pj_link {
   height: 40px;
   width: 40px;
-  background: #4649FF;
+  background: #8C61FF;
   position: absolute;
   right: 10px;
   line-height: 40px;
@@ -349,7 +350,7 @@ a {
   background: transparent;
   line-height: 20px;
   font-size: 1.2rem;
-  color: #4649FF;
+  color: #8C61FF;
 }
 
 .list_name {
@@ -397,12 +398,12 @@ a {
   text-align: center;
   font-size: 1rem;
   font-weight: 700;
-  color: #141417;
+  color: #fcfcff;
 }
 
 
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 400px) {
   #works_projects, #works_skills{
     width: 320px;
     grid-template-columns: 1fr;
