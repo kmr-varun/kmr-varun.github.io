@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="rps-main">
+        <h1 class="rps-head">Rock Paper Scissor!</h1>
+
+        <div class="rps-play-screen">
+            <div class="play-screen-bot" id="playbot">
+                <div class="bot-option-icon" id="boticon"></div>
+                <div class="bot-option-hand"></div>
+            </div>
+
+            <div class="play-screen-score">
+                <div class="screen-score-bot" id="botscore">0</div>
+                <div class="screen-score-div">-</div>
+                <div class="screen-score-user" id="userscore">0</div>
+            </div>
+
+            <div class="play-screen-user" id="playuser">
+                <div class="user-option-icon" id="usericon"></div>
+                <div class="user-option-hand"></div>
+            </div>
+        </div>
+        <div class="play-winner">
+            Winner is: <span id="tell_winner">None!</span>
+        </div>
+        <div class="rps-user-options">
+            <div class="user-options-rock" id="options_rock" onclick="UserChoice(this.id)"></div>
+            <div class="user-options-paper" id="options_paper" onclick="UserChoice(this.id)"></div>
+            <div class="user-options-scissor" id="options_scissor" onclick="UserChoice(this.id)"></div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
