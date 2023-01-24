@@ -1,0 +1,344 @@
+@font-face {
+    font-family: Gilroy;
+    src: url(Gilroy-Semibold.ttf);
+}
+
+@font-face {
+    font-family: GilroyH;
+    src: url(Gilroy-Heavy.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+body{
+    background: #051937;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+#my_back{
+    background-image: linear-gradient(to top, #051937, #071833, #0a1830, #0b172c, #0d1629);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+}
+
+#nav_cnt{
+    height:  70px;
+    width: 100%;
+    background: transparent;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+}
+
+#nav_head{
+    height: 50px;
+    width: 110px;
+    background: transparent;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color: white;
+    line-height: 50px;
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 25px;
+}
+
+#nav_social {
+    height: 50px;
+    width: 110px;
+    background: transparent;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: white;
+    line-height: 50px;
+    text-align: center;
+    font-family: Gilroy;
+    font-size: 25px;
+}
+
+#social1{
+    height: 25px;
+    width: 25px;
+    background: url(instagram.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 10px;
+    top: 12.5px;
+}
+
+#social2 {
+    height: 30px;
+    width: 30px;
+    background: url(facebook.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 70px;
+    top: 10px;
+}
+
+#dvd{
+    height: 35px;
+    width: 1.2px;
+    background: #C0C7D1;
+    position: absolute;
+    left: 52.5px;
+    top: 7.5px;
+}
+
+#head{
+    height: 150px;
+    width: 90%;
+    background: transparent;
+    position: absolute;
+    left: 5%;
+    top: calc(50% - 75px);
+    color: white;
+    font-family: GilroyH;
+    line-height: 150px;
+    text-align: center;
+    font-size: 10em;
+}
+
+#my_self{
+    height: 200%;
+    width: 100%;
+    background: #051937;
+    position: absolute;
+    left: 0%;
+    top: 100%;
+}
+
+#code_box{
+    height: 550px;
+    width: 95%;
+    background: transparent;
+    position: absolute;
+    left: 2.5%;
+    top: 0%;
+}
+
+#code_cnt{
+    height: 550px;
+    width: 550px;
+    background: #051937;
+    position: absolute;
+    right: 5%;
+    top: 0%;
+    border-radius: 5px;
+    border: 1px #475569 solid;
+}
+
+#pots{
+    height: 30px;
+    width: 100%;
+    background: transparent;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    border-bottom: 1px solid #475569;
+}
+
+#clx{
+    height: 20px;
+    width: 45px;
+    background: transparent;
+    position: absolute;
+    left: 10px;
+    top: 5px;
+}
+
+#c1, #c2, #c3{
+    height: 10px;
+    width: 10px;
+    background: #475569;
+    position: absolute;
+    left: 0px;
+    top: 5px;
+    border-radius: 50%;
+}
+
+#c2{
+    left: 16px;
+}
+
+#c3{
+    left: 32.5px;
+}
+
+#slg{
+    height: 200px;
+    width: 550px;
+    background: transparent;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+}
+
+#slg1 {
+    height: 200px;
+    width: 550px;
+    background: transparent;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    color: white;
+    font-family: GilroyH;
+    font-size: 10em;
+    text-align: center;
+    line-height: 200px;
+    transform: rotate(-90deg) translate(-175px, -90px);
+}
+
+#code_r{
+    height: 500px;
+    width: 100%;
+    background: transparent;
+    position: absolute;
+    left: 0%;
+    top: 40px;
+    font-family: 'Share Tech Mono', monospace;
+    line-height: 25px;
+    font-size: 15px;
+}
+
+.r_line{
+    height: 25px;
+    width: 100%;
+    background: transparent;
+    position: absolute;
+    left: 0%;
+}
+
+#r_line_1 {
+    top: 0px;
+}
+#r_line_2 {
+    top: 25px;
+}
+#r_line_3 {
+    top: 50px;
+}
+#r_line_4 {
+    top: 75px;
+}
+#r_line_5 {
+    top: 100px;
+}
+#r_line_6 {
+    top: 125px;
+}
+#r_line_7 {
+    top: 150px;
+}
+#r_line_8 {
+    top: 175px;
+}
+#r_line_9 {
+    top: 200px;
+}
+#r_line_10{
+    top: 225px;
+}
+#r_line_11 {
+    top: 250px;
+}
+#r_line_12 {
+    top: 275px;
+}
+#r_line_13 {
+    top: 300px;
+}
+#r_line_14 {
+    top: 325px;
+}
+#r_line_15 {
+    top: 350px;
+}
+#r_line_16 {
+    top: 375px;
+}
+#r_line_17 {
+    top: 400px;
+}
+#r_line_18 {
+    top: 425px;
+}
+#r_line_19 {
+    top: 450px;
+}
+#r_line_20{
+    top: 475px;
+}
+
+#r_line_n{
+    height: 25px;
+    width: 40px;
+    background: transparent;
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    color: #5c6676;
+}
+
+
+#r_line_c{
+    height: 25px;
+    width: calc(100% - 50px);
+    background: transparent;
+    position: absolute;
+    right: 0px;
+    color: white;
+    letter-spacing:-10px;
+    top: 0px;
+}
+
+span{
+    padding: none;
+    margin: none;
+}
+
+#gopen, #gclose{
+    color: #5c6676;
+    letter-spacing: 1px;
+}
+
+#mtg{
+    color: #6fc1e9;
+    letter-spacing: 1px;
+}
+
+#ntxt {
+    color: white;
+    letter-spacing: 1px;
+}
+
+#comm{
+    color: #5c6676;
+    letter-spacing: 1px;
+}
+
+#opts {
+    height: 100px;
+    width: 100px;
+    background: white;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+
+
+
+
+
+
