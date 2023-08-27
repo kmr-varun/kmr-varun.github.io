@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XO</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <textarea id="game-log" rows="12"></textarea>
+    <div class="game-head">Tic-Tac-Toe</div>
+    <div class="score-box">
+        <div class="score-player">
+            <div class="score-head">Player1</div>
+            <div class="score-main" id="score1" style="color: #ff8906">0</div>
+        </div>
+        <div class="score-dvd">-</div>
+        <div class="score-player">
+            <div class="score-head">Player2</div>
+            <div class="score-main" id="score2" style="color: #e53170">0</div>
+        </div>
+        
+    </div>
+    <div class="game-status" id="game_stat"></div>
+    <div class="game-container" id="game_container">
+        <div class="game-box" id="box1" onclick="makeMove(this.id)"></div>
+        <div class="game-box" id="box2" onclick="makeMove(this.id)"></div>
+        <div class="game-box" id="box3" onclick="makeMove(this.id)"></div>
+        <div class="game-box" id="box4" onclick="makeMove(this.id)"></div>
+        <div class="game-box" id="box5" onclick="makeMove(this.id)"></div>
+        <div class="game-box" id="box6" onclick="makeMove(this.id)"></div>
+        <div class="game-box" id="box7" onclick="makeMove(this.id)"></div>
+        <div class="game-box" id="box8" onclick="makeMove(this.id)"></div>
+        <div class="game-box" id="box9" onclick="makeMove(this.id)"></div>
+        <div class="win-cross" id="game-cross">
+            <div class="cross-in" id="cross-inner"></div>
+        </div>
+    </div>
+    <div class="restart-btn" onclick="restartGame()">Restart Game</div>
+    <div class="restart-btn" style="margin-bottom: 20px;" onclick="resetGame()">Reset Game</div>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="container-full-absolute center">
+        <div class="search-box-cnt center">
+            <input type="text" id="weather_city" class="city-input" autocomplete="off">
+            <button id="search" class="search-icon" ></button>
+        </div>
+
+        <div id="all">
+            <div class="user-location center">
+                <div class="location-icon"></div>
+                <div class="location-city" id="lcity"></div>
+            </div>
+    
+            <div class="user-date center" id="ldate"></div>
+    
+            <div class="show-img center">
+                <img src="icons/clear-night.pn" class="weather-icon" id="wicon"  >
+            </div>
+    
+            <div class="weather-type center" id="weather_type"></div>
+    
+            <div class="show-temp center">
+                <span class="temp" id="tempt"></span>
+            </div>
+    
+            <div class="weather-details center">
+                <div class="card">
+                    <div class="card-icon1"></div>
+                    <div class="card-value" id="press"></div>
+                    <div class="card-name">Pressure</div>
+                </div>
+                <div class="card">
+                    <div class="card-icon2"></div>
+                    <div class="card-value" id="humid"></div>
+                    <div class="card-name">Humidity</div>
+                </div>
+                <div class="card">
+                    <div class="card-icon3"></div>
+                    <div class="card-value" id="wind"></div>
+                    <div class="card-name">Wind Speed</div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        
+        
+
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>

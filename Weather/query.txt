@@ -1,0 +1,1 @@
+https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/Indore?unitGroup=metric&key=X6ZU9K7LESQD7THWG4U89CMM3&contentType=json
