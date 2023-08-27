@@ -66,14 +66,18 @@ function GetWinner(botchoice, userchoice) {
 function MaintainScore(gameWinner) {
     var BotScore = document.getElementById("botscore").innerHTML;
     var UserScore = document.getElementById("userscore").innerHTML;
-    if (gameWinner == "bot") {
+
+    setTimeout(() => {
+        if (gameWinner == "bot") {
         var newscore = eval(parseInt(BotScore) + 1);
         document.getElementById("botscore").innerHTML = newscore;
-    }
-    else if (gameWinner == "user") {
-        var newscore = eval(parseInt(UserScore) + 1);
-        document.getElementById("userscore").innerHTML = newscore;
-    }
+        }
+        else if (gameWinner == "user") {
+            var newscore = eval(parseInt(UserScore) + 1);
+            document.getElementById("userscore").innerHTML = newscore;
+        }
+    }, 2000);
+    
 }
 
 
