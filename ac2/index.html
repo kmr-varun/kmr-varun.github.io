@@ -1,0 +1,457 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aditya Cotex</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="relative" x-data="{ state: false }">
+        <div class="absolute inset-0 blur-xl h-[580px]" style="
+            background: linear-gradient(
+              143.6deg,
+              rgba(192, 132, 252, 0) 20.79%,
+              rgba(232, 121, 249, 0.26) 40.92%,
+              rgba(204, 171, 238, 0) 70.35%
+            );
+          "></div>
+        <div class="relative">
+            <header>
+                <!-- <div :class="{'mx-2 pb-5': state, 'hidden': !state}" class="md:hidden">
+                    <div class="flex items-center justify-between py-5 md:block">
+                        <a href="javascript:void(0)">
+                            <img src="https://placehold.co/120x50" width="120" height="50" alt="Aditya Cotex logo" />
+                        </a>
+                        <div class="md:hidden">
+                            <button @click="state = !state" class="menu-btn text-gray-500 hover:text-gray-800">
+                                
+                                <template x-if="state">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </template>
+                                <template x-if="!state">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                                    </svg>
+                                </template>
+                            </button>
+                        </div>
+                    </div>
+                </div> -->
+                <nav :class="{'absolute top-0 inset-x-0 bg-white shadow-lg rounded-xl border mx-2 mt-2 md:shadow-none md:border-none md:mx-0 md:mt-0 md:relative md:bg-transparent': state}"
+                    class="pb-5 md:text-sm">
+                    <div class="gap-x-14 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-8">
+                        <div class="flex items-center justify-between py-5 md:block">
+                            <!-- <a href="javascript:void(0)">
+                                <img src="https://placehold.co/120x50" width="120" height="50"
+                                    alt="Aditya Cotex logo" />
+                            </a> -->
+                            <!-- <div class="md:hidden">
+                                <button @click="state = !state" class="menu-btn text-gray-500 hover:text-gray-800">
+                                    <template x-if="state">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20"
+                                            fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </template>
+                                    <template x-if="!state">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                                        </svg>
+                                    </template>
+                                </button>
+                            </div> -->
+                        </div>
+                        <!-- <div :class="{'block': state, 'hidden': !state}"
+                            class="flex-1 items-center mt-8 md:mt-0 md:flex">
+                            <ul class="flex-1 justify-center items-center space-y-6 md:flex md:space-x-6 md:space-y-0">
+                                <template x-for="item in [
+                                    { title: 'Features', path: 'javascript:void(0)' },
+                                    { title: 'Integrations', path: 'javascript:void(0)' },
+                                    { title: 'Customers', path: 'javascript:void(0)' },
+                                    { title: 'Pricing', path: 'javascript:void(0)' }
+                                ]" :key="item.title">
+                                    <li class="text-gray-700 hover:text-gray-900">
+                                        <a :href="item.path" class="block" x-text="item.title"></a>
+                                    </li>
+                                </template>
+                            </ul>
+                            <div class="items-center justify-end mt-6 space-y-6 md:flex md:mt-0">
+                                <a href="javascript:void(0)"
+                                    class="flex items-center justify-center gap-x-1 py-2 px-4 text-white font-medium bg-gray-800 hover:bg-gray-700 active:bg-gray-900 rounded-full md:inline-flex">
+                                    Sign in
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                        class="w-5 h-5">
+                                        <path fill-rule="evenodd"
+                                            d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div> -->
+                    </div>
+                </nav>
+            </header>
+            <!-- Section -->
+            <section>
+                <div class="max-w-screen-xl mx-auto px-4 py-28 mb-10 gap-12 text-gray-600 overflow-hidden md:px-8 md:flex">
+                    <div class="flex-none space-y-5 max-w-xl">
+                        <!-- <a href="javascript:void(0)"
+                            class="inline-flex gap-x-6 items-center rounded-full p-1 pr-6 border text-sm font-medium duration-150 hover:bg-white">
+                            <span class="inline-block rounded-full px-3 py-1 bg-indigo-600 text-white">
+                                News
+                            </span>
+                            <p class="flex items-center">
+                                Read the launch post from here
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                    class="w-5 h-5">
+                                    <path fillRule="evenodd"
+                                        d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                                        clipRule="evenodd" />
+                                </svg>
+                            </p>
+                        </a> -->
+                        <h1 class="text-4xl text-gray-800 font-extrabold sm:text-5xl">
+                            Aditya Cotex Industrial Fabrics
+                        </h1>
+                        <p>
+                            Experience the power of Aditya Cotex filter cloths, designed to elevate your industrial
+                            processes through 6 game-changing benefits: unmatched performance, cost reductions, tailored
+                            solutions, product longevity, industry compliance, and certified quality assurance.
+                        </p>
+                        <div class="flex items-center gap-x-3 sm:text-sm">
+                            <a href="#contact_us"
+                                class="flex items-center justify-center gap-x-1 py-2 px-4 text-white font-medium bg-gray-800 duration-150 hover:bg-gray-700 active:bg-gray-900 rounded-full md:inline-flex">
+                                Get Your Custom Filter Cloth Now
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                                    class="w-5 h-5">
+                                    <path fillRule="evenodd"
+                                        d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+                                        clipRule="evenodd" />
+                                </svg>
+                            </a>
+                            
+                        </div>
+                    </div>
+                    <div class="flex-1 hidden md:block">
+                        
+                        <img src="assets/factory.svg" class="max-w-xl" />
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <section class="relative py-28 bg-gray-900" x-data="{
+        features: [
+            {
+                icon: 'M199,125.31l-49.89-18.38L130.69,57a19.92,19.92,0,0,0-37.38,0L74.93,106.93,25,125.31a19.92,19.92,0,0,0,0,37.38l49.89,18.38L93.31,231a19.92,19.92,0,0,0,37.38,0l18.38-49.89L199,162.69a19.92,19.92,0,0,0,0-37.38Zm-60,33.9a19.89,19.89,0,0,0-11.8,11.8L112,212.28,96.79,171A19.89,19.89,0,0,0,85,159.21h0L43.72,144,85,128.79A19.89,19.89,0,0,0,96.79,117L112,75.72,127.21,117a19.89,19.89,0,0,0,11.8,11.8L180.28,144ZM140,40a12,12,0,0,1,12-12h12V16a12,12,0,0,1,24,0V28h12a12,12,0,0,1,0,24H188V64a12,12,0,0,1-24,0V52H152A12,12,0,0,1,140,40ZM252,88a12,12,0,0,1-12,12h-4v4a12,12,0,0,1-24,0v-4h-4a12,12,0,0,1,0-24h4V72a12,12,0,0,1,24,0v4h4A12,12,0,0,1,252,88Z',
+                title: 'Unparalleled Performance ',
+                desc: 'Expertly engineered fabrics deliver enhanced filtration.'
+            },
+            {
+                icon: 'M51.51,104.49l-32-32a12,12,0,0,1,0-17l32-32a12,12,0,1,1,17,17L45,64,68.49,87.51a12,12,0,0,1-17,17Zm48,0a12,12,0,0,0,17,0l32-32a12,12,0,0,0,0-17l-32-32a12,12,0,1,0-17,17L123,64,99.51,87.51A12,12,0,0,0,99.51,104.49ZM200,36H180a12,12,0,0,0,0,24h16V196H60V140a12,12,0,0,0-24,0v60a20,20,0,0,0,20,20H200a20,20,0,0,0,20-20V56A20,20,0,0,0,200,36Z',
+                title: 'Cost Reductions',
+                desc: 'Prolonged service life & tailored solutions save money.'
+            },
+            {
+                icon: 'M224,196h-4V40a12,12,0,0,0-12-12H152a12,12,0,0,0-12,12V76H96A12,12,0,0,0,84,88v36H48a12,12,0,0,0-12,12v60H32a12,12,0,0,0,0,24H224a12,12,0,0,0,0-24ZM164,52h32V196H164Zm-56,48h32v96H108ZM60,148H84v48H60Z',
+                title: 'Industry Tailoring',
+                desc: 'Engineered to meet your industry’s unique needs.'
+            },
+            {
+                icon: 'M219.68,117.26a12,12,0,0,0-7.47-8.5L157.77,88.35l14-70A12,12,0,0,0,151.23,7.81l-112,120a12,12,0,0,0,4.56,19.43l54.44,20.41-14,70a12,12,0,0,0,20.54,10.54l112-120A12,12,0,0,0,219.68,117.26ZM116.05,200.93l7.72-38.58a12,12,0,0,0-7.56-13.59L69,131.07l70.93-76-7.72,38.58a12,12,0,0,0,7.56,13.59L187,124.93Z',
+                title: 'Product Durability',
+                desc: 'Superior materials ensure long-lasting reliability.'
+            },
+            {
+                icon: 'M208,20H72A36,36,0,0,0,36,56V224a12,12,0,0,0,12,12H192a12,12,0,0,0,0-24H60v-4a12,12,0,0,1,12-12H208a12,12,0,0,0,12-12V32A12,12,0,0,0,208,20ZM120,44h40v60l-12.81-9.6a12,12,0,0,0-14.4,0L120,104Zm76,128H72a35.59,35.59,0,0,0-12,2.06V56A12,12,0,0,1,72,44H96v84a12,12,0,0,0,19.2,9.6L140,119l24.81,18.6A12,12,0,0,0,184,128V44h12Z',
+                title: 'Regulation Compliant',
+                desc: 'Designed with safety & environmental standards in mind.'
+            },
+            {
+                icon: 'M156,224a12,12,0,0,1-12,12H112a12,12,0,0,1,0-24h32A12,12,0,0,1,156,224ZM128,116a16,16,0,1,0-16-16A16,16,0,0,0,128,116Zm99.53,40.7-12.36,55.63a19.9,19.9,0,0,1-12.88,14.53A20.16,20.16,0,0,1,195.6,228a19.87,19.87,0,0,1-12.29-4.27L157.17,204H98.83L72.69,223.74A19.87,19.87,0,0,1,60.4,228a20.16,20.16,0,0,1-6.69-1.15,19.9,19.9,0,0,1-12.88-14.53L28.47,156.7a20.1,20.1,0,0,1,4.16-17.14l27.83-33.4A127,127,0,0,1,69.11,69.7c13.27-33.25,37-54.1,46.64-61.52a20,20,0,0,1,24.5,0c9.6,7.42,33.37,28.27,46.64,61.52a127,127,0,0,1,8.65,36.46l27.83,33.4A20.1,20.1,0,0,1,227.53,156.7ZM101.79,180h52.42c19.51-35.7,23-69.78,10.39-101.4C154.4,53,136.2,35.9,128,29.12,119.8,35.9,101.6,53,91.4,78.6,78.78,110.22,82.28,144.3,101.79,180Zm-22.55,8.72a168,168,0,0,1-16.92-47.3l-10,12,10.58,47.64Zm124.43-35.31-10-12a168,168,0,0,1-16.92,47.3l16.33,12.33Z',
+                title: 'Certified Quality',
+                desc: 'Quality-focused production for assured performance.'
+            },
+            
+        ]
+    }">
+        <div class="relative z-10 max-w-screen-xl mx-auto px-4 text-gray-300 justify-center gap-24  md:px-8">
+            <div class="max-w text-center mb-10">
+                <h3 class="text-white text-3xl font-semibold sm:text-4xl">
+                    Unmatched Industrial Edge
+                </h3>
+                <p class="mt-3">
+                    Experience the power of Aditya Cotex filter cloths, designed to elevate your industrial processes
+                    through 6 game-changing benefits: unmatched performance, cost reductions, tailored solutions,
+                    product longevity, industry compliance, and certified quality assurance.
+                </p>
+            </div>
+            <div class="mt-12 lg:pl-20 lg:mt-0">
+                <ul class="grid gap-8 sm:grid-cols-2">
+                    <template x-for="(item, idx) in features" :key="idx">
+                        <li class="flex gap-x-4">
+                            <div
+                                class="flex-none w-12 h-12 bg-gray-700 text-cyan-400 rounded-lg flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                    viewBox="0 0 256 256" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" :d="item.icon" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="text-lg text-gray-100 font-semibold" x-text="item.title">
+                                </h4>
+                                <p class="mt-3" x-text="item.desc">
+                                </p>
+                            </div>
+                        </li>
+                    </template>
+                </ul>
+            </div>
+        </div>
+        <div class="absolute inset-0 max-w-md mx-auto h-72 blur-[118px]"
+            style="background: linear-gradient(152.92deg, rgba(192, 132, 252, 0.2) 4.54%, rgba(232, 121, 249, 0.26) 34.2%, rgba(192, 132, 252, 0.1) 77.55%)">
+        </div>
+    </section>
+
+    <section class="py-28"
+        style="background: linear-gradient(152.92deg, rgba(192, 132, 252, 0.2) 4.54%, rgba(232, 121, 249, 0.17) 34.2%, rgba(192, 132, 252, 0.1) 77.55%);">
+        <div class="max-w-screen-xl mx-auto px-4 md:text-center md:px-8">
+            <div class="max-w-xl space-y-3 md:mx-auto">
+                <h3 class="text-indigo-600 font-semibold">
+                    Filter Cloth Features
+                </h3>
+                <p class="text-gray-800 text-3xl font-semibold sm:text-4xl">
+                    Industrial-Grade Filter Cloths
+                </p>
+                <p class="text-gray-600">
+                    Engineered for resilience and efficiency. Superior Durability & Longevity. Increased Filtration
+                    Efficiency. Tailored for Unique Industrial Needs. Optimal filtration performance. Manufactured for
+                    industrial durability. Efficient production processes.
+                </p>
+            </div>
+            <div class="mt-4">
+                <a href="#contact_us"
+                    class="inline-block py-2 px-4 text-white font-medium bg-gray-800 duration-150 hover:bg-gray-700 active:bg-gray-900 rounded-lg shadow-md hover:shadow-none">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div x-data="{ stats: [
+        { data: '35K', desc: 'Customers consectetur adipiscing elit.' },
+        { data: '10K+', desc: 'Downloads efficitur id eu nulla facilisis turpis' },
+        { data: '40+', desc: 'Countries maximus sit amet auctor sed,' },
+        { data: '30M+', desc: 'Total revenue consectetur adipiscing elit' }
+    ] 
+}">
+
+        <section class="py-28 relative bg-gray-900">
+
+            <div class="relative z-10 max-w-screen-xl mx-auto px-4 md:px-8">
+                <div class="max-w-2xl xl:mx-auto xl:text-center">
+                    <h3 class="text-white text-3xl font-semibold sm:text-4xl">
+                        Our customers are always happy
+                    </h3>
+                    <p class="mt-3 text-gray-300">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis sollicitudin quam ut
+                        tincidunt.
+                    </p>
+                </div>
+                <div class="mt-12">
+                    <ul
+                        class="flex-wrap gap-x-12 gap-y-10 items-center space-y-8 sm:space-y-0 sm:flex xl:justify-center">
+                        <template x-for="(item, index) in stats" :key="index">
+                            <li class="sm:max-w-[15rem]">
+                                <h4 class="text-4xl text-white font-semibold" x-text="item.data"></h4>
+                                <p class="mt-3 text-gray-400 font-medium" x-text="item.desc"></p>
+                            </li>
+                        </template>
+                    </ul>
+                </div>
+            </div>
+            <div class="absolute inset-0 max-w-md mx-auto h-80 blur-[118px] sm:h-72"
+                style="background: linear-gradient(152.92deg, rgba(192, 132, 252, 0.2) 4.54%, rgba(232, 121, 249, 0.26) 34.2%, rgba(192, 132, 252, 0.1) 77.55%)">
+            </div>
+        </section>
+
+        <div x-data="{ selectedFaq: null, faqs: [
+  { q: 'What types of filter cloths does Aditya Cotex offer?', a: 'We offer a wide selection of filter cloths suitable for various industrial applications, including woven, melt-blown, and needle-punched fabrics.' },
+  { q: 'Can I customize filter cloths for my specific needs?', a: 'Yes, our filter cloths can be customized to your precise specifications, ensuring optimal performance for your unique industrial processes.' },
+  { q: 'What are the durability tests conducted on Aditya Cotex filter cloths?', a: 'Our filter cloths undergo rigorous testing to ensure high durability and quality standards, meeting the demands of challenging industrial environments.' },
+  { q: 'How efficient are Aditya Cotex filtration processes?', a: 'Our efficient production processes lead to faster turnaround times, reduced downtime, and lower operating costs without compromising on product quality.' },
+  { q: 'What kind of support is available for industrial filtration challenges?', a: 'Our experienced team is committed to providing expert assistance to help you overcome any industrial filtration challenge and streamline your production processes.' }
+] }">
+            <section class="leading-relaxed max-w-screen-xl mt-12 mb-12 mx-auto px-4 md:px-8">
+                <div class="space-y-3 text-center">
+                    <h1 class="text-3xl text-gray-800 font-semibold">
+                        Frequently Asked Questions
+                    </h1>
+                    <p class="text-gray-600 max-w-lg mx-auto text-lg">
+                        Answered all frequently asked questions, Still confused? feel free
+                        to contact us.
+                    </p>
+                </div>
+                <div class="mt-14 max-w-2xl mx-auto">
+                    <template x-for="(item, index) in faqs" :key="index">
+                        <div class="space-y-3 mt-5 overflow-hidden border-b"
+                            @click="selectedFaq = selectedFaq === index ? null : index">
+                            <h4
+                                class="cursor-pointer pb-5 flex items-center justify-between text-lg text-gray-700 font-medium">
+                                <span x-text="item.q"></span>
+                                <svg x-show="selectedFaq === index" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-5 w-5 text-gray-500 ml-2" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M20 12H4" />
+                                </svg>
+                                <svg x-show="selectedFaq !== index" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-5 w-5 text-gray-500 ml-2" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                                        d="M12 4v16m8-8H4" />
+                                </svg>
+                            </h4>
+                            <div x-ref="answerElRef"
+                                class="transition-[max-height,opacity] overflow-hidden duration-500 ease-in-out" :style="{
+            maxHeight: selectedFaq === index ? '1000px' : '0px',
+            opacity: selectedFaq === index ? 1 : 0,
+          }">
+                                <div>
+                                    <p class="text-gray-500 pb-4" x-text="item.a"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <section id="contact_us" x-data="{
+  contactMethods: [
+      {
+          icon: `
+              <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='w-6 h-6'>
+                  <path stroke-linecap='round' stroke-linejoin='round' d='M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75' />
+              </svg>
+          `,
+          contact: 'support@adityacotex.in'
+      },
+      {
+          icon: `
+              <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='w-6 h-6'>
+                  <path stroke-linecap='round' stroke-linejoin='round' d='M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z' />
+              </svg>
+          `,
+          contact: '+91 1234567809'
+      },
+      {
+          icon: `
+              <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='w-6 h-6'>
+                  <path stroke-linecap='round' stroke-linejoin='round' d='M15 10.5a3 3 0 11-6 0 3 3 0 016 0z' />
+                  <path stroke-linecap='round' stroke-linejoin='round' d='M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z' />
+              </svg>
+          `,
+          contact: '11 A, Avantika Nagar, Sector A, Sanwer Road Industrial Area, Indore, Madhya Pradesh 452015'
+      }
+  ]
+}">
+        <div class="py-14 relative bg-gray-900">
+            <div class="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
+                <div class="max-w-lg mx-auto gap-12 justify-center text-center lg:flex lg:max-w-none">
+                    <div class="max-w-lg space-y-3">
+                        <h3 class="text-indigo-600 font-semibold">Contact</h3>
+                        <p class="text-white text-3xl font-semibold sm:text-4xl">
+                            Let us know how we can help
+                        </p>
+                        <p class="text-gray-300">
+                            We’re here to help and answer any question you might have, We
+                            look forward to hearing from you! Please fill out the form, or
+                            us the contact information bellow.
+                        </p>
+                        <div>
+                            <ul class="mt-6 flex flex-wrap gap-x-10 gap-y-6 items-center">
+                                <template x-for="(item, index) in contactMethods" :key="index">
+                                    <li class="flex items-center gap-x-3">
+                                        <div class="flex-none text-gray-400" x-html="item.icon"></div>
+                                        <p class="text-gray-300" x-text="item.contact"></p>
+                                    </li>
+                                </template>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="absolute inset-0 max-w-md mx-auto h-80 blur-[118px] sm:h-72"
+                style="background: linear-gradient(152.92deg, rgba(192, 132, 252, 0.2) 4.54%, rgba(232, 121, 249, 0.26) 34.2%, rgba(192, 132, 252, 0.1) 77.55%)">
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
+
+            <div class="mt-0 py-10 border-t items-center justify-center sm:flex">
+                <p>© 2024 Aditya Cotex Industrial Fabrics Pvt Ltd.</p>
+                <ul class="flex flex-wrap items-center gap-4 mt-6 sm:text-sm sm:mt-0">
+                    <template x-for="(item, idx) in footerNavs" :key="idx">
+                        <li class="text-gray-800 hover:text-gray-500 duration-150">
+                            <a x-bind:href="item.href" x-text="item.name"></a>
+                        </li>
+                    </template>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        document.addEventListener("alpine:init", () => {
+            Alpine.data("dropdown", () => ({
+                open: false,
+                toggle() {
+                    this.open = !this.open;
+                },
+                close() {
+                    this.open = false;
+                },
+                init() {
+                    this.$watch("open", (value) => {
+                        if (value) {
+                            this.$nextTick(() => {
+                                window.addEventListener("click", this.close);
+                            });
+                        } else {
+                            window.removeEventListener("click", this.close);
+                        }
+                    });
+                },
+            }));
+        });
+    </script>
+</body>
+
+</html>
