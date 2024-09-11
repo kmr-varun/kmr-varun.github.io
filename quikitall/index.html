@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="base.css" />
+    <title>Quikit AI</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+            font-family: "Plus Jakarta Sans", sans-serif;
+            color: white;
+        }
+
+        .container {
+            width: 100vw;
+            position: relative;
+        }
+
+        .logo {
+            position: relative;
+            top: 30px;
+            left: 80px;
+            width: min-content;
+        }
+
+        .content-main {
+            text-align: center;
+            margin-top: 160px;
+            padding: 20px;
+            /* background-color: red; */
+        }
+
+        .small-heading {
+            font-size: 30px;
+            font-weight: 500;
+            line-height: 30px;
+            margin-bottom: 5px;
+        }
+
+        .main-heading {
+            font-size: 100px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            background: linear-gradient(93.01deg, rgba(207, 229, 255, 0.8) 6.27%, rgba(207, 229, 255, 0.8) 25%, #FFFFFF 50%, rgba(207, 229, 255, 0.6) 55%, rgba(207, 229, 255, 0.6) 78.71%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 100px;
+            letter-spacing: -2px;
+        }
+
+        .image-container {
+            margin-top: 240px;
+            height: 700px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        .second-container {
+            height: 180vh;
+            display: flex;
+            justify-content: center;
+            /* background-color: red; */
+        }
+
+        .item {
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            opacity: 1;
+            position: relative;
+            /* background-color: aqua; */
+        }
+
+        .image-section img {
+            width: 150px;
+        }
+
+        .demo-1 {
+            margin-top: -200px;
+            text-align: center;
+            padding: 20px;
+        }
+
+
+
+        .extcnt {
+            height: 30vh;
+            width: 100vw;
+            background-color: black;
+        }
+
+        .part-4 {
+            display: flex;
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+            overflow: hidden;
+        }
+
+        .lft-part-4 {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            width: 30%;
+            height: 100%;
+            /* background-color: red; */
+        }
+
+        .rght-part-4 {
+            display: flex;
+            flex-direction: column;
+            /* background-color: red; */
+            gap: 40vh;
+            width: 80%;
+            height: auto;
+            margin-top: 50%;
+            /* background-color: yellowgreen; */
+        }
+
+        .content-rght-part-4 {
+            display: flex;
+            flex-direction: column;
+            gap: 5vh;
+            opacity: 0;
+        }
+
+        .text-section {
+            font-size: 25px;
+            font-weight: 600;
+            line-height: 100px;
+            height: 100px;
+            background: linear-gradient(93.01deg, rgba(207, 229, 255, 0.8) 6.27%, #FFFFFF 40.6%, rgba(255, 255, 255, 0.7) 78.71%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            /* color: black; */
+        }
+
+        .contact-container {
+            height: 75vh;
+            width: 100vw;
+            background: linear-gradient(180deg, #DBDBDB 12.35%, #AAB1BA 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .contact-card {
+            width: 100vw;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-card h2 {
+            font-size: 90px;
+            font-weight: 600;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            background: linear-gradient(94.09deg, rgba(3, 3, 3, 0.43) -4.04%, #000000 35.22%, #000000 76.64%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+        }
+
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+            transition: transform 0.5s ease;
+        }
+
+        .contact-buttons div {
+            display: inline-block;
+            /* margin: 10px; */
+            padding: 10px 40px;
+            font-size: 18px;
+            line-height: 30px;
+            font-weight: 500;
+            text-decoration: none;
+            color: #000;
+            background-color: #FFF;
+            border-radius: 50px;
+            transition: background-color 0.3s, color 0.3s, transform 0.5s ease;
+        }
+
+        .contact-buttons .next-arrow {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            background-color: #FFF;
+            color: #000;
+            transition: transform 0.5s ease, background-color 0.3s, color 0.3s;
+        }
+
+        /* Group hover animation */
+
+        .contact-buttons:hover {
+            transform: translateX(-150px);
+        }
+
+        .contact-buttons:hover .text-button {
+            transform: translateX(180px);
+            /* Moves the text button to the right */
+        }
+
+        .contact-buttons:hover .next-arrow {
+            transform: translateX(-125px);
+            /* Moves the arrow button to the left */
+        }
+
+        /* Hover background color change */
+        .contact-buttons:hover div {
+            background-color: #000;
+            color: #FFF;
+        }
+
+        .video-popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            /* background-color: red; */
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .video-popup video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="logo.png" alt="Logo" width="70">
+        </div>
+
+        <div class="content-main">
+            <h3 class="small-heading">Quikit's Story</h3>
+            <h1 class="main-heading">From Dream to Reality</h1>
+
+            <div class="image-container">
+                <img src="hero.jpeg" alt="Landing Image">
+            </div>
+        </div>
+    </div>
+
+    <div class="part-4">
+        <div class="lft-part-4">
+            <div class="image-section">
+                <img src="logo.png" alt="Left Image">
+            </div>
+        </div>
+        <div class="rght-part-4">
+            <div class="content-rght-part-4 c-one text-section">
+                <h1>The Spark of an Idea</h1>
+            </div>
+            <div class="content-rght-part-4 c-two text-section">
+                <h1>Hearing the Call for Change</h1>
+            </div>
+            <div class="content-rght-part-4 c-three text-section">
+                <h1>Shaping the Future with Flexibility</h1>
+            </div>
+            <div class="content-rght-part-4 c-four text-section" style="font-size: 23px;">
+                <h1>Breaking Barriers with Low-Code Innovation</h1>
+            </div>
+            <div class="content-rght-part-4 c-five text-section">
+                <h1>Connecting the Dots: CRM Meets Chat</h1>
+            </div>
+            <div class="content-rght-part-4 c-six text-section">
+                <h1>A Vision Beyond Software</h1>
+            </div>
+            <div class="content-rght-part-4 c-seven text-section">
+                <h1>Team Spotlight: The Heart of Quikit</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="demo-1">
+        <main>
+            <div class="content"></div>
+            <div class="cover" id="vid1">
+                <h2 class="cover__title">The Heart & Soul</h2>
+            </div>
+            <div class="grid">
+                <div class="grid__item" style="--r: 4;--c: 4;">
+                    <div class="grid__item-img3" id="sir" style="background-image:url(img/pillar/1.png); "></div>
+                </div>
+            </div>
+    </div>
+    <div class="content">
+        <div class="cover" id="vid1">
+            <h2 class="cover__title">Visionaries & <br> Builders</h2>
+        </div>
+        <div class="grid">
+            <div class="grid__item" style="--r: 3;--c: 4;">
+                <div class="grid__item-img2" style="background-image:url(img/vision/1.png); "></div>
+            </div>
+            <div class="grid__item" style="--r: 2;--c: 2;">
+                <div class="grid__item-img2" style="background-image:url(img/vision/2.png);"></div>
+            </div>
+            <div class="grid__item" style="--r: 2;--c: 6;">
+                <div class="grid__item-img2" style="background-image:url(img/vision/3.png);"></div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="cover">
+            <h2 class="cover__title">The Architects</h2>
+        </div>
+        <div class="grid">
+            <div class="grid__item" style="--r: 1;--c: 4;">
+                <div class="grid__item-img" style="background-image:url(img/architect/1.png);"></div>
+            </div>
+            <div class="grid__item" style="--r: 1;--c: 1;">
+                <div class="grid__item-img" style="background-image:url(img/architect/2.png);"></div>
+            </div>
+            <!-- <div class="grid__item" style="--r: 2;--c: 2;">
+                <div class="grid__item-img" style="background-image:url(img/architect/3.png);"></div>
+            </div> -->
+            <div class="grid__item" style="--r: 2;--c: 6;">
+                <div class="grid__item-img" style="background-image:url(img/architect/4.png);"></div>
+            </div>
+            <div class="grid__item" style="--r: 3;--c: 4;">
+                <div class="grid__item-img" style="background-image:url(img/architect/5.png);"></div>
+            </div>
+            <div class="grid__item" style="--r: 4;--c: 1;">
+                <div class="grid__item-img" style="background-image:url(img/architect/6.png);"></div>
+            </div>
+            <div class="grid__item" style="--r: 5;--c: 6;">
+                <div class="grid__item-img" style="background-image:url(img/architect/7.png);"></div>
+            </div>
+            <div class="grid__item" style="--r: 6;--c: 2;">
+                <div class="grid__item-img" style="background-image:url(img/architect/8.png);"></div>
+            </div>
+            <!-- <div class="grid__item" style="--r: 7;--c: 3;">
+                <div class="grid__item-img" style="background-image:url(img/architect/10.png);"></div>
+            </div> -->
+            <div class="grid__item" style="--r: 8;--c: 5;">
+                <div class="grid__item-img" style="background-image:url(img/architect/11.png);"></div>
+            </div>
+            <div class="grid__item" style="--r: 9;--c: 1;">
+                <div class="grid__item-img" style="background-image:url(img/architect/12.png);"></div>
+            </div>
+            <div class="grid__item" style="--r: 11;--c: 6;">
+                <div class="grid__item-img" style="background-image:url(img/architect/13.png);"></div>
+            </div>
+            <div class="grid__item" style="--r: 10;--c: 4;">
+                <div class="grid__item-img" style="background-image:url(img/architect/14.png);"></div>
+            </div>
+            <div class="grid__item" style="--r: 11;--c: 2;">
+                <div class="grid__item-img" style="background-image:url(img/architect/15.png);"></div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="cover">
+            <h2 class="cover__title">The Storytellers</h2>
+        </div>
+        <div class="grid">
+            <div class="grid__item" style="--r: 1;--c: 1;">
+                <div class="grid__item-img" style="background-image:url(img/story/5.png);"></div>
+            </div>
+            <div class="grid__item" style="--r: 1;--c: 7;">
+                <div class="grid__item-img" style="background-image:url(img/story/1.png);"></div>
+            </div>
+            <div class="grid__item" style="--r: 3;--c: 3;">
+                <div class="grid__item-img" style="background-image:url(img/story/2.png);"></div>
+            </div>
+            <div class="grid__item" style="--r: 4;--c: 5;">
+                <div class="grid__item-img" style="background-image:url(img/story/3.png);"></div>
+            </div>
+            <div class="grid__item" style="--r: 6;--c: 2;">
+                <div class="grid__item-img" style="background-image:url(img/story/4.png);"></div>
+            </div>
+            <div class="grid__item" style="--r: 6;--c: 7;">
+                <div class="grid__item-img" style="background-image:url(img/story/6.png);"></div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="cover" id="vid1">
+            <h2 class="cover__title">Pillars of Support</h2>
+        </div>
+        <div class="grid">
+            <div class="grid__item" style="--r: 1;--c: 3;">
+                <div class="grid__item-img2" style="background-image:url(img/pillar/2.png);"></div>
+            </div>
+            <div class="grid__item" style="--r: 2;--c: 6;">
+                <div class="grid__item-img2" style="background-image:url(img/pillar/3.png);"></div>
+            </div>
+        </div>
+    </div>
+    <div class="extcnt"></div>
+    </main>
+    </div>
+
+
+    <div class="contact-container">
+        <div class="contact-card">
+            <h2>Launching Soon</h2>
+            <div class="contact-buttons">
+                <div class="text-button" id="open-popup">The Future Is Now!</div>
+                <div href="#" class="next-arrow" id="open-popup-arrow"><i class="ri-arrow-right-line"></i></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-popup" id="video-popup">
+        <video id="popup-video">
+            <source src="final.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</body>
+
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+
+<script>
+    gsap.registerPlugin(ScrollTrigger)
+    const lenis = new Lenis()
+
+    lenis.on('scroll', (e) => {
+        // console.log(e)
+    })
+
+    function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+
+    // let tl4 = gsap.timeline({
+    //     scrollTrigger: {
+    //         trigger: ".part-4",
+    //         start: "50% 50%",
+    //         end: "200% 50%",
+    //         pin: true,
+    //         scrub: 1,
+    //     },
+    // });
+
+    let tl4 = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".part-4",
+            start: "top top",
+            end: "300% 50%",
+            pin: true,
+            scrub: 1,
+        },
+    });
+
+    tl4.to(".c-one", {
+        marginTop: "-39%",
+        opacity: "1",
+    }, 'sct-1')
+
+    tl4.to(".c-two", {
+        opacity: "1",
+    }, 'sct-2')
+    tl4.to(".c-one", {
+        marginTop: "-78%",
+        opacity: "0",
+    }, 'sct-2')
+
+    tl4.to(".c-three", {
+        opacity: "1",
+    }, 'sct-3')
+    tl4.to(".c-two", {
+        opacity: "0",
+    }, 'sct-3')
+    tl4.to(".c-one", {
+        marginTop: "-120%",
+    }, 'sct-3')
+
+
+    tl4.to(".c-three", {
+        opacity: "0",
+    }, 'sct-4')
+    tl4.to(".c-four", {
+        opacity: "1",
+    }, 'sct-4')
+    tl4.to(".c-one", {
+        marginTop: "-160%",
+    }, 'sct-4')
+
+
+    tl4.to(".c-five", {
+        opacity: "1",
+    }, 'sct-5')
+    tl4.to(".c-four", {
+        opacity: "0",
+    }, 'sct-5')
+    tl4.to(".c-one", {
+        marginTop: "-200%",
+    }, 'sct-5')
+
+
+    tl4.to(".c-six", {
+        opacity: "1",
+    }, 'sct-6')
+    tl4.to(".c-five", {
+        opacity: "0",
+    }, 'sct-6')
+    tl4.to(".c-one", {
+        marginTop: "-240%",
+    }, 'sct-6')
+
+
+    tl4.to(".c-seven", {
+        opacity: "1",
+    }, 'sct-7')
+    tl4.to(".c-six", {
+        opacity: "0",
+    }, 'sct-7')
+    tl4.to(".c-one", {
+        marginTop: "-280%",
+    }, 'sct-7')
+
+    // tl4.to(".c-seven", {
+    //     opacity: "0",
+    // }, 'sct-8')
+    // tl4.to(".c-one", {
+    //     marginTop: "-320%",
+    // }, 'sct-8')
+
+
+    // tl4.to(".c-eight", {
+    //     opacity: "0",
+    // }, 'sct-6')
+    // tl4.to(".c-one", {
+    //     marginTop: "-360%",
+    // }, 'sct-6')
+
+
+
+    const gridItems = [...document.querySelectorAll('.grid > .grid__item')];
+
+
+    // const lenis = new Lenis({
+    //     lerp: 0.1,
+    //     smooth: true,
+    // });
+    // const scrollFn = () => {
+    //     lenis.raf();
+    //     requestAnimationFrame(scrollFn);
+    // };
+    // requestAnimationFrame(scrollFn);
+
+    gridItems.forEach(item => {
+
+        const image = item.querySelector('.grid__item-img');
+
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: item,
+                start: "top top",
+                end: "bottom top",
+                scrub: true
+            }
+        })
+            .set(image, {
+                transformOrigin: `${gsap.utils.random(0, 1) > 0.5 ? 0 : 100}% 100%`
+            });
+        // .to(image, {
+        //     ease: 'none',
+        //     scale: 0
+        // });
+    });
+
+
+    // Get elements
+    const openPopupButtons = document.querySelectorAll('#open-popup, #open-popup-arrow');
+    const videoPopup = document.getElementById('video-popup');
+    const video = document.getElementById('popup-video');
+
+    // Function to open popup
+    function openPopup() {
+        videoPopup.style.display = 'flex';  // Show popup
+    }
+
+    // Function to close popup and reset video
+    function closePopup() {
+        videoPopup.style.display = 'none';  // Hide popup
+        video.pause();  // Pause video
+        video.currentTime = 0;  // Reset video to the beginning
+    }
+
+    // Function to toggle play/pause of video
+    function toggleVideoPlayback() {
+        if (video.paused) {
+            video.play();  // Play video if paused
+        } else {
+            video.pause();  // Pause video if playing
+        }
+    }
+
+    // Attach event listeners to buttons
+    openPopupButtons.forEach(button => {
+        button.addEventListener('click', openPopup);
+    });
+
+    // Listen for escape key press to close popup and reset video
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+            closePopup();
+        }
+    });
+
+    // Attach event listener to video for click to play/pause
+    video.addEventListener('click', toggleVideoPlayback);
+
+
+
+</script>
+
+</html>
